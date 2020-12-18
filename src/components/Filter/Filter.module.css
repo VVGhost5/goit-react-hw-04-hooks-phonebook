@@ -1,0 +1,8 @@
+.input {
+  display: block;
+  width: 200px;
+  height: 40px;
+  outline: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}

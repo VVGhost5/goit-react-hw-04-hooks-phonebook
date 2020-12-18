@@ -1,0 +1,32 @@
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.form {
+  display: block;
+  flex-wrap: wrap;
+}
+.label {
+  display: block;
+}
+
+.input {
+  display: block;
+  width: 200px;
+  height: 40px;
+  outline: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.button {
+  display: block;
+  width: 120px;
+  height: 40px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
