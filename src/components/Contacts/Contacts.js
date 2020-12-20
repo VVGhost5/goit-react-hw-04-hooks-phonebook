@@ -3,7 +3,7 @@ import styles from "./Contacts.module.css";
 import { v4 as uuidv4 } from "uuid";
 import PropTypes from "prop-types";
 
-const Contacts = ({ contacts, onDelete, children }) => {
+const Contacts = ({ contacts, onDelete }) => {
   return (
     <div>
       <ul className={styles.list}>
@@ -21,7 +21,6 @@ const Contacts = ({ contacts, onDelete, children }) => {
           </li>
         ))}
       </ul>
-      {children}
     </div>
   );
 };
@@ -30,7 +29,6 @@ export default Contacts;
 
 Contacts.propTypes = {
   onDelete: PropTypes.func.isRequired,
-  children: PropTypes.element.isRequired,
   contacts: PropTypes.arrayOf(
     PropTypes.exact({
       id: PropTypes.string.isRequired,

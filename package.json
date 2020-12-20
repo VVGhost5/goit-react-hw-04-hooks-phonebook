@@ -2,7 +2,7 @@
   "name": "repository",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://VVGhost5.github.io/МОЙ РЕПОЗИТОРИЙ",
+  "homepage": "https://VVGhost5.github.io/goit-react-hw-04-hooks-phonebook",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",

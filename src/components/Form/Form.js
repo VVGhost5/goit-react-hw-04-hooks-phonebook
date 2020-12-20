@@ -6,34 +6,16 @@ export default function Form({ onSubmit, addContact }) {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
 
-  function handleChange({ target }) {
-    const { name, value } = target;
-    switch (name) {
-      case "name": {
-        setName(value);
-        break;
-      }
-
-      case "number": {
-        setNumber(value);
-        break;
-      }
-      default: {
-        break;
-      }
-    }
-  }
-
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit(name, number);
     reset();
-  }
+  };
 
-  function reset() {
+  const reset = () => {
     setName("");
     setNumber("");
-  }
+  };
 
   return (
     <div>
@@ -47,7 +29,7 @@ export default function Form({ onSubmit, addContact }) {
             name="name"
             placeholder="Enter the name"
             value={name}
-            onChange={handleChange}
+            onChange={({ target }) => setName(target.value)}
           />
         </label>
         <label className={styles.label}>
@@ -58,7 +40,7 @@ export default function Form({ onSubmit, addContact }) {
             name="number"
             placeholder="Enter the phone number"
             value={number}
-            onChange={handleChange}
+            onChange={({ target }) => setNumber(target.value)}
           />
         </label>
         <button className={styles.button} onSubmit={addContact}>
